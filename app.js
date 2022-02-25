@@ -27,13 +27,15 @@ const calculadora = () => {
         try {
           let operacion = operaciones[seleccion];
           let res = operacion(a, b);
-          console.log(`${num1} ${seleccion} ${num2} = ${res}`);
+          console.log(`---------------------------------------`);
+          console.log(`Operación: ${num1} ${seleccion} ${num2} = ${res}`);
+          console.log("Ctrl + C para terminar");
         } catch (error) {
           console.log(
             "Error con la operación introducida. ¡Intentalo de nuevo!"
           );
         }
-        readline.close();
+        calculadora();
       });
     });
   });
